@@ -1,23 +1,18 @@
-let x = 400;
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
 }
 
 function draw() {
-  x+=floor(movedX / 5);
   background(0);
-  fill(255, 0, 0);
-  ellipse(x,  200, 200);
+  ellipse(mouseX, mouseY, 150, 150);
 }
-function mouseClicked(){
-  if (x > 200){
-    x-=10;
+function mouseMoved(){
+    if (mouseX > 100){
+    fill(204, 255, 0);
+  } if (mouseX > 200){
+    fill(255, 255, 0);
+  } if (mouseX > 300) {
+    fill(255, 0, 0);
   }
-  else if (x < 200){
-    x+=10;
-  }
-  x+=floor(movedX / 5);
-  background(0);
-  fill(255, 0, 0);
-  ellipse(x, 200, 200);
 }
